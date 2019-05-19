@@ -92,6 +92,7 @@
     <module>jms-benchmark-hornetq</module>
     <module>jms-benchmark-qpid</module>
     <module>jms-benchmark-qpid-1.0</module>
+    <module>amqp-benchmark-qpid-proton</module>
   </modules>
 
 </project>
