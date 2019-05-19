@@ -37,11 +37,10 @@
     <password>guest</password>
     <benchmark-options></benchmark-options>
     <box>boxname</box>
-    <qpid-version>0.20</qpid-version>
+    <qpid-version>0.32</qpid-version>
   </properties>
 
   <dependencies>
-
     <dependency>
       <groupId>org.fusesource.jmsbenchmark</groupId>
       <artifactId>jms-benchmark</artifactId>
@@ -63,7 +62,6 @@
       <artifactId>slf4j-nop</artifactId>
       <version>${slf4j-version}</version>
     </dependency>
-
   </dependencies>
 
   <build>
@@ -79,5 +77,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>

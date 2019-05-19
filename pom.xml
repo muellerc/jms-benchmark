@@ -35,52 +35,33 @@
   <name>${project.artifactId}</name>
 
   <properties>
-
     <!-- dependency versions -->
-    <scala-version>2.9.1</scala-version>
-    <maven-scala-plugin-version>2.15.0</maven-scala-plugin-version>
+    <scala-version>2.12.8</scala-version>
+    <scala-maven-plugin-version>4.0.2</scala-maven-plugin-version>
     <karaf-version>2.2.0</karaf-version>
-    <slf4j-version>1.6.6</slf4j-version>
-    <jackson-version>2.1.0</jackson-version>
+    <slf4j-version>1.7.26</slf4j-version>
+    <jackson-version>2.9.9</jackson-version>
 
   </properties>
 
   <dependencies>
-
-    <!-- Scala Support -->
-    <dependency>
-      <groupId>org.scala-lang</groupId>
-      <artifactId>scala-library</artifactId>
-      <scope>compile</scope>
-      <version>${scala-version}</version>
-    </dependency>
-
     <dependency>
       <groupId>org.apache.karaf.shell</groupId>
       <artifactId>org.apache.karaf.shell.console</artifactId>
       <version>${karaf-version}</version>
     </dependency>
-
-    <!-- to make mvn scala:console work nicely -->
-    <dependency>
-      <groupId>org.scala-lang</groupId>
-      <artifactId>jline</artifactId>
-      <version>${scala-version}</version>
-    </dependency> 
   </dependencies>
   
   <build>
-
     <sourceDirectory>src/main/scala</sourceDirectory>
     <testSourceDirectory>src/test/scala</testSourceDirectory>
 
 
     <plugins>
-
       <plugin>
-        <groupId>org.scala-tools</groupId>
-        <artifactId>maven-scala-plugin</artifactId>
-        <version>${maven-scala-plugin-version}</version>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>${scala-maven-plugin-version}</version>
         <executions>
           <execution>
             <goals>
