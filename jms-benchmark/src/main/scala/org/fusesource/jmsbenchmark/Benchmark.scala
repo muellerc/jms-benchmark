@@ -353,12 +353,15 @@ class Benchmark extends Action {
     destinations_counts = destinations_counts.reverse
 
     for(
-      persistent <- Array(false, true) ;
-      mode <- Array("queue", "topic") ;
+      //persistent <- Array(false, true) ;
+      persistent <- Array(true) ;
+      //mode <- Array("queue", "topic") ;
+      mode <- Array("queue") ;
       producers <- client_counts;
       destination_count <- destinations_counts;
       consumers <- client_counts;
-      message_size <- Array(10, 100, 1000, 100000, 10000000) ;
+      //message_size <- Array(1, 10, 100, 1000, 100000, 10000000) ;
+      message_size <- Array(1) ;
       tx_size <- Array(0, 1, 10, 100)
     ) {
 
@@ -592,8 +595,5 @@ class Benchmark extends Action {
       remaining -= 1
       timeRemaining -= description.duration
     }
-
-
-
   }
 }

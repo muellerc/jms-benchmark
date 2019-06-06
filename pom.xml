@@ -41,10 +41,15 @@
     <karaf-version>2.2.0</karaf-version>
     <slf4j-version>1.7.26</slf4j-version>
     <jackson-version>2.9.9</jackson-version>
-
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <scope>compile</scope>
+      <version>${scala-version}</version>
+    </dependency>
     <dependency>
       <groupId>org.apache.karaf.shell</groupId>
       <artifactId>org.apache.karaf.shell.console</artifactId>
